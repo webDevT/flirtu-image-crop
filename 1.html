@@ -40,14 +40,16 @@
     .cropper {
         max-width: 100% !important;
         height: auto !important;
-        max-height: 100vh;
+        max-height: calc(100vh - 80px);
         
     }
     .cropped-photo-container {
-        min-height: 100vh;
+        min-height: calc(100vh - 80px);
         background: #000;
         padding-left: 15px;
         padding-right: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -72,9 +74,12 @@
         box-sizing: border-box;
         position: fixed;
         z-index: 999;
-        bottom: 20px;
+        bottom: 0px;
         left: 0;
         width: 100%;
+        background: #000;
+        padding-bottom: 20px;
+        padding-top: 21px;
     }
     .crop-cancel,
     .crop-button {
